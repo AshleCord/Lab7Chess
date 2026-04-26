@@ -26,9 +26,9 @@ public class ChessApiClient {
 
         // Parse the JSON response and print the fen field
         JSONObject json = new JSONObject(response.body());
-        String returnedFen = json.getString("fen");
+        String bestMove = json.getString("move");
 
-        System.out.println("Returned FEN: " + returnedFen);
-        return returnedFen;
+        System.out.println("Returned best move: " + bestMove);
+        return bestMove;
     }
 }
